@@ -301,7 +301,7 @@ $( "#dialog-link, #icons li" ).hover(
 		$.ajax({ 
 		   type: "GET",
 		   dataType: "jsonp",
-		   url: "http://healthwebconsole-rhteapitemp.apps.ose.rhsummit.openshift.online/his/registry/"+$('input[name=firstname]').val()+"/"+$('input[name=familyname]').val()+"/"+$('input[name=hisId]').val(),
+		   url: "http://apigw-rhteapitemp.apps.ose.rhsummit.openshift.online/his/registry/"+$('input[name=firstname]').val()+"/"+$('input[name=familyname]').val()+"/"+$('input[name=hisId]').val(),
 		   success: function(data){        
 		     alert(data);
 		   }
