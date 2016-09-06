@@ -301,7 +301,7 @@ $( "#dialog-link, #icons li" ).hover(
 		$.ajax({ 
 		   type: "GET",
 		   dataType: "jsonp",
-		   url: "http://apigw-rhteapitemp.apps.ose.rhsummit.openshift.online/his/registry/"+$('input[name=firstname]').val()+"/"+$('input[name=familyname]').val()+"/"+$('input[name=hisId]').val(),
+		   url: "http://apigw-rhteapitemp.apps.ose.rhsummit.openshift.online/his/registry/"+$('input[name=firstname]').val()+"/"+$('input[name=familyname]').val()+"/"+$('input[name=hisId]').val()+"?user_key=ec4b291020c637b87856cf6fe0b7e871",
 		   success: function(data){        
 		     alert(data);
 		   }
@@ -335,7 +335,7 @@ $( "#dialog-link, #icons li" ).hover(
 		$.ajax({ 
 		   type: "GET",
 		   dataType: "jsonp",
-		   url: "http://apigw-rhteapitemp.apps.ose.rhsummit.openshift.online/his/dotest/"+$('input[name=hisId]').val()+"/"+$( "#dept option:selected" ).val()+"/"+$('input[name=testdetail]').val()+"/"+$('input[name=observation]').val()+"?user_key=30631e06b29283766508d46e695d2de7",
+		   url: "http://apigw-rhteapitemp.apps.ose.rhsummit.openshift.online/his/dotest/"+$('input[name=hisId]').val()+"/"+$( "#dept option:selected" ).val()+"/"+$('input[name=testdetail]').val()+"/"+$('input[name=observation]').val()+"?user_key=ec4b291020c637b87856cf6fe0b7e871",
 		   success: function(data){        
 		     alert(data);
 		   }
@@ -348,7 +348,7 @@ $( "#dialog-link, #icons li" ).hover(
 		$.ajax({ 
 		   type: "GET",
 		   dataType: "jsonp",
-		   url: "http://apigw-rhteapitemp.apps.ose.rhsummit.openshift.online/his/prescribe/"+$('input[name=hisId]').val()+"/"+$('#interval option:selected').val()+"/"+$('#drugs option:selected').val()+"?user_key=30631e06b29283766508d46e695d2de7",
+		   url: "http://apigw-rhteapitemp.apps.ose.rhsummit.openshift.online/his/prescribe/"+$('input[name=hisId]').val()+"/"+$('#interval option:selected').val()+"/"+$('#drugs option:selected').val()+"?user_key=ec4b291020c637b87856cf6fe0b7e871",
 		   success: function(data){        
 		     alert(data);
 		   }
@@ -455,7 +455,7 @@ function populateTable() {
     var tableContent = '';
 
 
-    $.get( 'http://apigw-rhteapitemp.apps.ose.rhsummit.openshift.online/his/allpatients?user_key=30631e06b29283766508d46e695d2de7', function( data ) {
+    $.get( 'http://apigw-rhteapitemp.apps.ose.rhsummit.openshift.online/his/allpatients?user_key=ec4b291020c637b87856cf6fe0b7e871', function( data ) {
 				var lineByline = data.split('\n');
         $.each(lineByline , function(index,value){
         	
@@ -482,7 +482,7 @@ function populateTable() {
 function populatePharmacyTable(pharmacyhisid) {
 
     var tableContent = '';
-	  var pharmacyUrl = 'http://apigw-rhteapitemp.apps.ose.rhsummit.openshift.online/his/pharmacy/'+pharmacyhisid+"?user_key=30631e06b29283766508d46e695d2de7";
+	  var pharmacyUrl = 'http://apigw-rhteapitemp.apps.ose.rhsummit.openshift.online/his/pharmacy/'+pharmacyhisid+"?user_key=ec4b291020c637b87856cf6fe0b7e871";
 		
 		
 		if("" == pharmacyhisid){
