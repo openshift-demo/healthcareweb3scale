@@ -396,7 +396,7 @@ $(document).ready(function() {
     	function radiologyMessage(msg){$('#radiologyDiv').html(message(radiologyConsoleArray,msg));}
     	
     	//##Connect to ESB Message 
-    	var esbmsgsocket = new WebSocket("ws://hisesb-fusedemo.e4ff.pro-eu-west-1.openshiftapps.com/demo");
+    	var esbmsgsocket = new WebSocket("ws://hisesbws-fusedemo.e4ff.pro-eu-west-1.openshiftapps.com/demo");
 			esbmsgsocket.onopen = function(){console.log('Starting getting ESB messages ......');}
 			
 			esbmsgsocket.onmessage = function(msg){
